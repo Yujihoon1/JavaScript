@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오버튼을 통해 캐릭터 생성하기</title>
+    <style>
+        #charSelection, img{
+            width: 300px;
+            height: 250px;
+        }
+    </style>
+    <script type="text/javascript">
+        function createImg(){
+            let radios = document.getElementsByName("radioBtn");
+            let radioVal = "";
+            for(let i=0; i<radios.length;i++){
+                if(radios[i].checked){
+                    //console.log(radios[i].value); //콘솔로 제대로 뜨나 확인
+                    radioVal = "../1_html/sample/image/" + radios[i].value;
+                    break;
+                }
+            }
+
+            //1.img 태그 생성
+            let img = document.createElement("img");
+            //2. 속성 만들어서, radioVal값 넣어주고
+            img.setAttribute("src",radioVal);
+            //3. 현재 화면에 img태그와 생성된 img태그를 바꿔준다.(replaceChild())
+            let parent = document.getElementById("charSelection");
+            let oldChild = document.querySelector("#charSelection>img");
+
+            parent.replaceChild(img,oldChild);
+        }
+    </script>
+</head>
+<body>
+    <input type="radio" name="radioBtn" value="img01.png">그림1 <br>
+    <input type="radio" name="radioBtn" value="img02.png">그림2 <br>
+    <input type="radio" name="radioBtn" value="img03.png">그림3 <br>
+    <input type="radio" name="radioBtn" value="img04.png">그림4 <br>
+
+    <button onclick="createImg();">캐릭터 생성하기</button>
+
+    <div id="charSelection"><img src=""></div>
+</body>
+</html>
