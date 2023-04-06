@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+                function deleteImg(){
+            //img태그를 삭제하면 안된다.
+            let img = document.querySelector("#imgView>img");
+             //#imgView의 자식 img의 속성 src에 " "를 줘서 빈칸으로 만들어서 사진이 없게 함.
+            img.setAttribute("src"," ");
+        }
+    </script>
+</head>
+<body>
+    <div id="imgView"><img src="./img/img01.png"></div>
+    <button onclick="deleteImg();">이미지 삭제하기</button>
+</body>
+</html>
