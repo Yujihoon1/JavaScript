@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+            function addAppend(){
+            let fieldset = document.getElementById("field");
+            //createElement("태그"); -> 해당 태그를 만들어냄 
+            let p = document.createElement("p");
+            //방법1) 변수명.appendChild -> fieldset.appendChild
+            //p.appendChild(document.createTextNode("test중"));
+            
+            //방법2) 변수명.textContent 
+            p.textContent="test중";
+
+            fieldset.appendChild(p);
+        }
+</script>
+</head>
+<body>
+    <button onclick="addAppend();">appendChild()</button>
+
+    <fieldset id="field">
+        <h1>테스트</h1>
+        <legend>부모태그</legend>
+        <div>div태그</div>
+        <p>p태그</p>
+    </fieldset>
+</body>
+</html>
