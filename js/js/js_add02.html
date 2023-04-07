@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+        function addBefore(){
+            let fieldset = document.getElementById("field");
+            let p = document.createElement("p");
+           p.textContent = "예시 1";
+
+            let div= document.querySelector("#field>div");
+
+            fieldset.insertBefore(p,div);
+            //앞에 추가하려고 할때는 기준점이 필요함.
+            //insertBefor(기준점,넣을태그); 인걸 명심하자
+        }
+</script>
+</head>
+<body>
+    <button onclick="addBefore();">insertBefore()</button>
+
+    <fieldset id="field">
+        <h1>테스트</h1>
+        <legend>부모태그</legend>
+        <div>div태그</div>
+        <p>p태그</p>
+    </fieldset>
+</body>
+</html>
