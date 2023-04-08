@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+            function moveElement(){
+            //let moveElement = document.getElementById("field").children[1];
+            let field = document.getElementById("field").childNodes[3];
+            document.body.appendChild(field);
+        }
+</script>
+</head>
+<body>
+    <button onclick="moveElement();">appendChild를 이용한 엘리먼트 이동</button>
+
+    <fieldset id="field">
+        <legend>부모태그</legend>
+        <div>div태그</div>
+        <p>p태그</p>
+    </fieldset>
+</body>
+</html>
