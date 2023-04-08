@@ -6,3 +6,12 @@
     <p>js_gallery_add : 사진 추가하기</p>
     <p>js_delete : 자바스크립트로 삭제하기</p>
 </div>
+<div id="add">
+    <h3>js_add: 태그 추가하기</h3>
+    <p>js_add01: addAppend()이용</p>
+    <p>js_add02: addBefore()이용</p>
+</div>
+<div id="move">
+    <h3>js_move: 이동시키기</h3>
+    <p>js_move01: appendChild를 이용한 엘리먼트 이동</p>
+</div>
