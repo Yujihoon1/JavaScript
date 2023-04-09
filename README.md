@@ -15,3 +15,9 @@
     <h3>js_move: 이동시키기</h3>
     <p>js_move01: appendChild를 이용한 엘리먼트 이동</p>
 </div>
+<div id="search">
+    <h3>js_search: 요소 검색하기</h3>
+    <p>js_search01: id로 검색하기</p>
+    <p>js_search02: name으로 검색하기</p>
+    <p>js_search03: 태그로 검색하기</p>
+</div>
