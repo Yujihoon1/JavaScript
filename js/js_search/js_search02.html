@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+        function searchName(){
+            //name이 test02인 태그들을 탐색
+            let doc = document.getElementsByName("name");
+            console.log(doc);
+            //doc의 value를 "name 속성으로 엘리먼트 탐색" 으로 지정하는 것
+            doc.value="name 속성으로 엘리먼트 탐색";
+        }
+</script>
+</head>
+<body>
+    <p onclick="searchName();">2. 엘리먼트의 name으로 탐색: 엘리먼트 여러개를 선택 - 반환: 배열<br>
+        <input type="text" name="name" value=""><br>
+        <input type="text" name="name" value=""><br>
+        <input type="text" name="name" value=""><br>
+        </p>
+</body>
+</html>

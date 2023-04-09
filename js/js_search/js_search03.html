@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+        function searchTagName(){
+            // document.getElementsByTagName
+            // tagName이 p인 엘리먼트들을 탐색
+            var doc = document.getElementsByTagName("p");
+            doc[1].style.color="blue";
+            doc[2].innerHTML="tagName으로 탐색";
+            doc[3].value="뭘까요";
+            console.log(doc[3]);
+        }   
+</script>
+</head>
+<body>
+    <p onclick="searchTagName();">3. 엘리먼트의 태그이름으로 탐색: 엘리먼트 여러개를 선택 - 반환: 배열</p>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+</body>
+</html>

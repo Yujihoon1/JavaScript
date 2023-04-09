@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<Script>
+            function searchId(){
+            // document.getElementById()
+            // id가 searchId인 엘리먼트 탐색
+            const doc = document.getElementById("searchId");
+            console.log(doc);
+            //innerHTML에 적힌걸로 적힘
+            doc.innerHTML = "id로 탐색하기!";
+            //style - color 로 색 지정
+            doc.style.color="green";
+        }
+</Script>
+</head>
+<body>
+    <p id="searchId" onclick="searchId()">1.엘리먼트의 id로 탐색: document의 엘리먼트 중 하나를 선택(Id로) : 
+                                            document.getElementNyId()사용 - 반환:값 하나</p>
+</body>
+</html>
