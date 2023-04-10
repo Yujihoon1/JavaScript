@@ -20,4 +20,5 @@
     <p>js_search01: id로 검색하기</p>
     <p>js_search02: name으로 검색하기</p>
     <p>js_search03: 태그로 검색하기</p>
+    <p>js_search_string01: 배열 중 몇번째인지 확인하기</p>
 </div>

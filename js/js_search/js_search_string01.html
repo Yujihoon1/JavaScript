@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<Script>
+        function searchString(){
+            //indexOf() : 왼->오
+            //lastIndexOf(): 오->왼
+            //검색하는 값이 존재하지 않을 경우 -1 리턴
+            let str = "짬뽕 짜장면 볶음밥 탕수육";
+            let search = prompt("검색할 이름 검색");
+
+            //배열 중 몇번째 있는 지 알려주는 것임
+            alert("indexof: "+ str.indexOf(search));
+            alert("lastindexof: "+str.lastIndexOf(search));
+        }
+</Script>
+</head>
+<body>
+    <p>짬뽕 짜장면 볶음밥 탕수육 중 택1</p>
+    <button onclick="searchString();">배열 중 몇 번째 인지 확인</button>
+</body>
+</html>
