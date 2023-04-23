@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .menu{
+            width: 200px;
+            background-color: blue;
+            color: white;
+            position: absolute;
+        }
+        #menu2{left:210px;}
+        #menu3{left:420px;}
+        a{text-decoration: none;}
+        .menu div{
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            // //.hover() : 마우스를 특정 엘리먼트 위에 올리면 발생하게 되는 이벤트
+            // $(".menu").hover(
+            //     function(){
+            //         $(this).children("div").show();
+            //     },   
+            //     function(){
+            //         $(this).children("div").hide();
+            //     }
+            // );
+            $(".menu").hover(function(){
+                $(this).children("div").toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <b>dom탐색</b>
+    <br>
+    <div id="menu1" class="menu">
+        <a href="../jq_search/jq_search01.html">탐색</a>
+        <div>인덱스로 탐색</div>
+        <div>인덱스 길이로 탐색</div>
+        <div>첫번째 요소로 탐색</div>
+        <div>마지막 요소로 탐색</div>
+    </div>
+    <div id="menu2" class="menu">
+        <a href="../jq_search/jq_search02.html">트리 탐색</a>
+        <div>.find()로 탐색</div>
+        <div>.children()로 탐색</div>
+        <div>.parent()로 탐색</div>
+        <div>.parents()로 탐색</div>
+        <div>.next()로 탐색</div>
+    </div>
+    <div id="menu3" class="menu">
+        <a href="../jq_search/jq_search03.html">기타 탐색</a>
+        <div>.is()로 존재 확인</div>
+        <div>.add()로 selector 대상 추가하기</div>
+    </div>
+</body>
+</html>

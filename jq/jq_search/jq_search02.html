@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("pre>b").eq(0).click(function(){
+                $("div").find("b").css({"font-size":"30pt","color":"blue"});
+            //$("div").children().text("2.children()"); -> 자식 요소 모두 선택
+            //$("div").children("#chd").text("2.children()"); -> 자식요소중 id가 chd인 것만 선택
+            });
+            $("pre>b").eq(1).click(function(){
+                $("div").children("#chd").text("2.children 발견!");
+            //parent는 부모 하나만 찾음
+            });
+            $("pre>b").eq(2).click(function(){
+                $("p").parent("div").css("background-color","yellow");
+                $("p").parent("div").css("color","red");
+            //parents는 자기보다 상위의 태그를 모두 찾음- 부모의 부모, 부모의 부모의 부모..
+            });
+            $("pre>b").eq(3).click(function(){
+                $("p>b").parents("body").css("background-color","green");
+            });
+            $("pre>b").eq(4).click(function(){
+                $("p").eq(0).next().css({"font-size":"50pt","color":"purple"});
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p><b>1. find</b></p>
+        <p id="chd">2. children</p>
+        <p>3. parent</p>
+        <p>4. parents</p>
+        <p>5. next</p>
+    </div>
+    <pre>
+        <b>find("selector")
+        선택한 엘리먼트의 자손들 중에 탐색하고자하는 엘리먼트를 찾는다.
+        </b>
+        <b>children("selector")
+        선택한 엘리먼트의 자식 요소들 중에 탐색하고자 하는 엘리먼트를 찾는다.
+        </b>
+        <b>parent()
+        선택한 엘리먼트의 부모요소를 찾는다.
+        </b>
+        <b>parents()
+            선택한 엘리먼트의 부모요소를 찾는다.
+            </b>
+        <b>next("selector")
+        선택한 엘리먼트의 다음에 따라오는 요소를 찾는다. 
+        </b>
+    </pre>
+</body>
+</html>

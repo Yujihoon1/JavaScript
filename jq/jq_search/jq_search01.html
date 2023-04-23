@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("div>p").eq(0).click(function(){
+                $("div b").eq(0).toggle();
+                $("div b").eq(1).css("color","yellow");
+            });
+
+            $("div>p").eq(1).click(function(){
+                $("div b").slice(1,2).toggle(); //그 길이만큼만 선택 가능하게 해준다.
+                $("div b").slice(2,3).css("color","orange");
+            });
+
+            $("div>p").eq(2).click(function(){
+                $("div b").first().css("color","blue");
+                $("div b").eq(2).toggle();
+            });
+            $("div>p").last().click(function(){
+                $("div b").last().css("color","green");
+                $("div b").last().toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>  
+        <b>eq()함수 : 선택한 엘리먼트들 중에 인덱스로 탐색</b> <br>
+        <b>slice()함수 : 선택한 엘리먼트들 중에 인덱스 길이로 탐색</b> <br>
+        <b>first()함수: 선택한 엘리먼트들 중에 첫번째 요소 탐색</b> <br>
+        <b>last()함수: 선택한 엘리먼트들 중에 마지막 요소 탐색</b>
+    </div>
+    <div>
+        <p>eq()</p>
+        <p>slice()</p>
+        <p>first()</p>
+        <p>last()</p>
+    </div>
+</body>
+</html>
